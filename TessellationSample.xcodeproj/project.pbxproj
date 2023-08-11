@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF1298FD2A8594E000EF0FFC /* TessellationSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1298FC2A8594E000EF0FFC /* TessellationSampleApp.swift */; };
+		EF1298FF2A8594E000EF0FFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1298FE2A8594E000EF0FFC /* ContentView.swift */; };
+		EF1299012A8594E100EF0FFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1299002A8594E100EF0FFC /* Assets.xcassets */; };
+		EF1299042A8594E100EF0FFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1299032A8594E100EF0FFC /* Preview Assets.xcassets */; };
+		EF12990C2A8596E800EF0FFC /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF12990B2A8596E800EF0FFC /* ARKit.framework */; };
+		EF12990E2A8596F100EF0FFC /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF12990D2A8596F100EF0FFC /* MetalKit.framework */; };
+		EF1299102A85991600EF0FFC /* WorldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12990F2A85991600EF0FFC /* WorldManager.swift */; };
+		EF1299122A85994800EF0FFC /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1299112A85994800EF0FFC /* MetalView.swift */; };
+		EF1299142A85996300EF0FFC /* TouchMTKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1299132A85996300EF0FFC /* TouchMTKView.swift */; };
+		EF1299162A85997A00EF0FFC /* ARCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1299152A85997A00EF0FFC /* ARCoordinator.swift */; };
+		EF1299182A85999900EF0FFC /* PhotoImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1299172A85999900EF0FFC /* PhotoImageRenderer.swift */; };
+		EF12991B2A8599CE00EF0FFC /* TessellationMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12991A2A8599CE00EF0FFC /* TessellationMain.swift */; };
+		EF12991D2A8599E500EF0FFC /* TessellationRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12991C2A8599E500EF0FFC /* TessellationRender.swift */; };
+		EF12991F2A8599F800EF0FFC /* TessellationFactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12991E2A8599F800EF0FFC /* TessellationFactors.swift */; };
+		EF1299212A859A1000EF0FFC /* WaterSurfaceAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1299202A859A1000EF0FFC /* WaterSurfaceAnimator.swift */; };
+		EF1299232A859A2A00EF0FFC /* tessellation_render.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF1299222A859A2A00EF0FFC /* tessellation_render.metal */; };
+		EF1299252A859A3D00EF0FFC /* tessellation_factors.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF1299242A859A3D00EF0FFC /* tessellation_factors.metal */; };
+		EF1299272A859A5200EF0FFC /* water_surface_animation.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF1299262A859A5200EF0FFC /* water_surface_animation.metal */; };
+		EF1299292A859B5800EF0FFC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1299282A859B5800EF0FFC /* Util.swift */; };
+		EF12992B2A859BC100EF0FFC /* ShaderCameraImage.metal in Sources */ = {isa = PBXBuildFile; fileRef = EF12992A2A859BC100EF0FFC /* ShaderCameraImage.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF1298F92A8594E000EF0FFC /* TessellationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TessellationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1298FC2A8594E000EF0FFC /* TessellationSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TessellationSampleApp.swift; sourceTree = "<group>"; };
+		EF1298FE2A8594E000EF0FFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EF1299002A8594E100EF0FFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF1299032A8594E100EF0FFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF12990B2A8596E800EF0FFC /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		EF12990D2A8596F100EF0FFC /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		EF12990F2A85991600EF0FFC /* WorldManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldManager.swift; sourceTree = "<group>"; };
+		EF1299112A85994800EF0FFC /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		EF1299132A85996300EF0FFC /* TouchMTKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchMTKView.swift; sourceTree = "<group>"; };
+		EF1299152A85997A00EF0FFC /* ARCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCoordinator.swift; sourceTree = "<group>"; };
+		EF1299172A85999900EF0FFC /* PhotoImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImageRenderer.swift; sourceTree = "<group>"; };
+		EF12991A2A8599CE00EF0FFC /* TessellationMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TessellationMain.swift; sourceTree = "<group>"; };
+		EF12991C2A8599E500EF0FFC /* TessellationRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TessellationRender.swift; sourceTree = "<group>"; };
+		EF12991E2A8599F800EF0FFC /* TessellationFactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TessellationFactors.swift; sourceTree = "<group>"; };
+		EF1299202A859A1000EF0FFC /* WaterSurfaceAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterSurfaceAnimator.swift; sourceTree = "<group>"; };
+		EF1299222A859A2A00EF0FFC /* tessellation_render.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = tessellation_render.metal; sourceTree = "<group>"; };
+		EF1299242A859A3D00EF0FFC /* tessellation_factors.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = tessellation_factors.metal; sourceTree = "<group>"; };
+		EF1299262A859A5200EF0FFC /* water_surface_animation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = water_surface_animation.metal; sourceTree = "<group>"; };
+		EF1299282A859B5800EF0FFC /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		EF12992A2A859BC100EF0FFC /* ShaderCameraImage.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ShaderCameraImage.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF1298F62A8594E000EF0FFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF12990C2A8596E800EF0FFC /* ARKit.framework in Frameworks */,
+				EF12990E2A8596F100EF0FFC /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF1298F02A8594E000EF0FFC = {
+			isa = PBXGroup;
+			children = (
+				EF1298FB2A8594E000EF0FFC /* TessellationSample */,
+				EF1298FA2A8594E000EF0FFC /* Products */,
+				EF12990A2A8596E800EF0FFC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF1298FA2A8594E000EF0FFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF1298F92A8594E000EF0FFC /* TessellationSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF1298FB2A8594E000EF0FFC /* TessellationSample */ = {
+			isa = PBXGroup;
+			children = (
+				EF1299192A8599BF00EF0FFC /* Tessellation */,
+				EF1298FC2A8594E000EF0FFC /* TessellationSampleApp.swift */,
+				EF1298FE2A8594E000EF0FFC /* ContentView.swift */,
+				EF12990F2A85991600EF0FFC /* WorldManager.swift */,
+				EF1299112A85994800EF0FFC /* MetalView.swift */,
+				EF1299132A85996300EF0FFC /* TouchMTKView.swift */,
+				EF1299152A85997A00EF0FFC /* ARCoordinator.swift */,
+				EF1299172A85999900EF0FFC /* PhotoImageRenderer.swift */,
+				EF1299282A859B5800EF0FFC /* Util.swift */,
+				EF12992A2A859BC100EF0FFC /* ShaderCameraImage.metal */,
+				EF1299002A8594E100EF0FFC /* Assets.xcassets */,
+				EF1299022A8594E100EF0FFC /* Preview Content */,
+			);
+			path = TessellationSample;
+			sourceTree = "<group>";
+		};
+		EF1299022A8594E100EF0FFC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF1299032A8594E100EF0FFC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF12990A2A8596E800EF0FFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF12990D2A8596F100EF0FFC /* MetalKit.framework */,
+				EF12990B2A8596E800EF0FFC /* ARKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF1299192A8599BF00EF0FFC /* Tessellation */ = {
+			isa = PBXGroup;
+			children = (
+				EF12991A2A8599CE00EF0FFC /* TessellationMain.swift */,
+				EF12991C2A8599E500EF0FFC /* TessellationRender.swift */,
+				EF12991E2A8599F800EF0FFC /* TessellationFactors.swift */,
+				EF1299202A859A1000EF0FFC /* WaterSurfaceAnimator.swift */,
+				EF1299222A859A2A00EF0FFC /* tessellation_render.metal */,
+				EF1299242A859A3D00EF0FFC /* tessellation_factors.metal */,
+				EF1299262A859A5200EF0FFC /* water_surface_animation.metal */,
+			);
+			path = Tessellation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF1298F82A8594E000EF0FFC /* TessellationSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF1299072A8594E100EF0FFC /* Build configuration list for PBXNativeTarget "TessellationSample" */;
+			buildPhases = (
+				EF1298F52A8594E000EF0FFC /* Sources */,
+				EF1298F62A8594E000EF0FFC /* Frameworks */,
+				EF1298F72A8594E000EF0FFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TessellationSample;
+			productName = TessellationSample;
+			productReference = EF1298F92A8594E000EF0FFC /* TessellationSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF1298F12A8594E000EF0FFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					EF1298F82A8594E000EF0FFC = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = EF1298F42A8594E000EF0FFC /* Build configuration list for PBXProject "TessellationSample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF1298F02A8594E000EF0FFC;
+			productRefGroup = EF1298FA2A8594E000EF0FFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF1298F82A8594E000EF0FFC /* TessellationSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF1298F72A8594E000EF0FFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1299042A8594E100EF0FFC /* Preview Assets.xcassets in Resources */,
+				EF1299012A8594E100EF0FFC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF1298F52A8594E000EF0FFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1299122A85994800EF0FFC /* MetalView.swift in Sources */,
+				EF12991F2A8599F800EF0FFC /* TessellationFactors.swift in Sources */,
+				EF12991D2A8599E500EF0FFC /* TessellationRender.swift in Sources */,
+				EF1299162A85997A00EF0FFC /* ARCoordinator.swift in Sources */,
+				EF1299272A859A5200EF0FFC /* water_surface_animation.metal in Sources */,
+				EF1299232A859A2A00EF0FFC /* tessellation_render.metal in Sources */,
+				EF1299252A859A3D00EF0FFC /* tessellation_factors.metal in Sources */,
+				EF1299292A859B5800EF0FFC /* Util.swift in Sources */,
+				EF1299102A85991600EF0FFC /* WorldManager.swift in Sources */,
+				EF1298FF2A8594E000EF0FFC /* ContentView.swift in Sources */,
+				EF1299182A85999900EF0FFC /* PhotoImageRenderer.swift in Sources */,
+				EF12992B2A859BC100EF0FFC /* ShaderCameraImage.metal in Sources */,
+				EF12991B2A8599CE00EF0FFC /* TessellationMain.swift in Sources */,
+				EF1299142A85996300EF0FFC /* TouchMTKView.swift in Sources */,
+				EF1298FD2A8594E000EF0FFC /* TessellationSampleApp.swift in Sources */,
+				EF1299212A859A1000EF0FFC /* WaterSurfaceAnimator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EF1299052A8594E100EF0FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF1299062A8594E100EF0FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF1299082A8594E100EF0FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TessellationSample/Preview Content\"";
+				DEVELOPMENT_TEAM = 64SMH392EJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This App uses the rear camera for the AR experience.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.TessellationSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF1299092A8594E100EF0FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TessellationSample/Preview Content\"";
+				DEVELOPMENT_TEAM = 64SMH392EJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This App uses the rear camera for the AR experience.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.TessellationSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF1298F42A8594E000EF0FFC /* Build configuration list for PBXProject "TessellationSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF1299052A8594E100EF0FFC /* Debug */,
+				EF1299062A8594E100EF0FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF1299072A8594E100EF0FFC /* Build configuration list for PBXNativeTarget "TessellationSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF1299082A8594E100EF0FFC /* Debug */,
+				EF1299092A8594E100EF0FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF1298F12A8594E000EF0FFC /* Project object */;
+}

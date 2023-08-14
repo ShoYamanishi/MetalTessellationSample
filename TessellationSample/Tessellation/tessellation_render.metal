@@ -109,6 +109,7 @@ fragment float4 fragment_tessellation(
 ) {
     const float3 camera_gcs{ M_camera[3][0],  M_camera[3][1],  M_camera[3][2] };
     const float3 material_color{ 0.529f, 0.808f, 0.922f };// Skyblue
+    const float specular_intensity{ 0.5f };
 
     const float  opacity{ 0.2f };
 
@@ -125,8 +126,8 @@ fragment float4 fragment_tessellation(
     // specular
     const auto dir_vertex_to_camera = normalize( in.world_position - camera_gcs );
     const auto normal_reflected = reflect( light_direction, in.normal );
-    const auto  cos_alpha = clamp( dot( normal_reflected, dir_vertex_to_camera ), 0.0f, 1.0f );
-    const auto specular_color = material_color * cos_alpha;
+    const auto  cos_alpha = clamp( -1.0f * dot( normal_reflected, dir_vertex_to_camera ), 0.0f, 1.0f );
+    const auto specular_color = material_color * cos_alpha * specular_intensity;
 
     const auto color = saturate( diffuse_color + ambient_color + specular_color );
     return float4( color, 1.0f - opacity );
